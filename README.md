@@ -12,6 +12,51 @@ npm run generate
 npm run check
 ```
 
+# Installation
+
+Install from npm:
+
+```sh
+npm install tree-sitter-sgf
+```
+
+```js
+const Parser = require("tree-sitter");
+const SGF = require("tree-sitter-sgf");
+
+const parser = new Parser();
+parser.setLanguage(SGF);
+const tree = parser.parse("(;GM[1]FF[4]SZ[19];B[pd];W[dd])");
+```
+
+Install from crates.io:
+
+```sh
+cargo add tree-sitter-sgf
+```
+
+```rust
+let mut parser = tree_sitter::Parser::new();
+let language = tree_sitter_sgf::LANGUAGE;
+parser.set_language(&language.into())?;
+let tree = parser.parse("(;GM[1]FF[4])", None).unwrap();
+```
+
+Install from PyPI:
+
+```sh
+pip install tree-sitter-sgf
+```
+
+```python
+import tree_sitter_sgf
+from tree_sitter import Language, Parser
+
+language = Language(tree_sitter_sgf.language())
+parser = Parser(language)
+tree = parser.parse(b"(;GM[1]FF[4])")
+```
+
 The grammar follows the SGF FF[4] syntax definition: a source file is a
 collection of one or more game trees; game trees contain sequences, nodes,
 properties, and bracketed property values. It intentionally does not validate

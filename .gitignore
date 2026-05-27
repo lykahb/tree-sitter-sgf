@@ -1,5 +1,10 @@
 node_modules/
+.npm-cache/
+.uv-cache/
+__pycache__/
 build/
+dist/
+*.egg-info/
 target/
 *.wasm
 *.so

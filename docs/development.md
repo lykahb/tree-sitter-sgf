@@ -21,6 +21,38 @@ local `corpus/**/*.sgf` file when the corpus is present. Public regression tests
 should stay in `test/corpus/` and use synthetic fixtures derived from the SGF
 specification.
 
+## Binding checks
+
+Validate the package bindings locally before publishing:
+
+```sh
+npm run check:bindings
+```
+
+That runs the Node native binding test, `cargo test`, and the Python binding
+unit test. Package dry runs are also useful before upload:
+
+```sh
+npm pack --dry-run
+cargo package --allow-dirty
+python -m build
+python -m twine check dist/*
+```
+
+## Publishing
+
+Publishing is manual for now. After the grammar, bindings, and package dry runs
+pass, publish each package with:
+
+```sh
+npm publish
+cargo publish --dry-run
+cargo publish
+python -m build
+python -m twine check dist/*
+python -m twine upload dist/*
+```
+
 ## Backwards compatibility with older SGF versions
 
 See the 
