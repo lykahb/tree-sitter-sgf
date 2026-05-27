@@ -1,0 +1,238 @@
+==================
+Minimal collection
+==================
+
+(;FF[4])
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content)))))))
+
+==================
+Multiple game trees
+==================
+
+(;GM[1]) (;GM[6])
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content))))))
+  (game_tree
+    (sequence
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content)))))))
+
+==================
+Linear sequence
+==================
+
+(;FF[4]GM[1]SZ[19];B[pd];W[dp];B[])
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content)))
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content)))
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content))))
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content))))
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content))))
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value))))))
+
+==================
+Nested variations
+==================
+
+(;FF[4]C[root](;C[a];C[b](;C[c])(;C[d];C[e]))(;C[f](;C[g];C[h];C[i])(;C[j])))
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content)))
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content)))))
+    (game_tree
+      (sequence
+        (node
+          (property
+            name: (property_identifier)
+            value: (property_value
+              (value_content))))
+        (node
+          (property
+            name: (property_identifier)
+            value: (property_value
+              (value_content)))))
+      (game_tree
+        (sequence
+          (node
+            (property
+              name: (property_identifier)
+              value: (property_value
+                (value_content))))))
+      (game_tree
+        (sequence
+          (node
+            (property
+              name: (property_identifier)
+              value: (property_value
+                (value_content))))
+          (node
+            (property
+              name: (property_identifier)
+              value: (property_value
+                (value_content)))))))
+    (game_tree
+      (sequence
+        (node
+          (property
+            name: (property_identifier)
+            value: (property_value
+              (value_content)))))
+      (game_tree
+        (sequence
+          (node
+            (property
+              name: (property_identifier)
+              value: (property_value
+                (value_content))))
+          (node
+            (property
+              name: (property_identifier)
+              value: (property_value
+                (value_content))))
+          (node
+            (property
+              name: (property_identifier)
+              value: (property_value
+                (value_content))))))
+      (game_tree
+        (sequence
+          (node
+            (property
+              name: (property_identifier)
+              value: (property_value
+                (value_content)))))))))
+
+==================
+Multiple values and composed values
+==================
+
+(;AB[aa][bb][cc]AR[aa:bb]LB[cc:A]SZ[19:13])
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content))
+          value: (property_value
+            (value_content))
+          value: (property_value
+            (value_content)))
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content)))
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content)))
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content)))))))
+
+==================
+Escaped value content
+==================
+
+(;C[line one\
+line two \] bracket \\ slash \: colon])
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content)))))))
+
+==================
+Lenient private and older identifiers
+==================
+
+(;FF[4]foo[bar]XPrivate[value])
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content)))
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content)))
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content)))))))

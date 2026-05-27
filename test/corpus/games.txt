@@ -1,0 +1,234 @@
+==================
+Go GM 1
+==================
+
+(;FF[4]GM[1]SZ[19]PB[player1]PW[player2]KM[6.5]HA[2]AB[pd][dp];B[];W[tt]TB[aa:cc]TW[dd])
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property
+          name: (property_identifier)
+          value: (property_value (value_content))
+          value: (property_value (value_content))))
+      (node
+        (property name: (property_identifier) value: (property_value)))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))))))
+
+==================
+Backgammon GM 6
+==================
+
+(;FF[4]GM[6]CO[c]CV[2]DI[31]MI[length:7][game:3][ws:2][bs:1];W[31hefe];B[double];W[take])
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property
+          name: (property_identifier)
+          value: (property_value (value_content))
+          value: (property_value (value_content))
+          value: (property_value (value_content))
+          value: (property_value (value_content))))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content))))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content))))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content)))))))
+
+==================
+Lines of Action GM 9
+==================
+
+(;FF[4]GM[9]SZ[8]AS[Black]IP[End]IY[true]SU[player1]SE[d4];B[e1-e3];W[C2:C5++];B[resign])
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content))))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content))))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content))))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content)))))))
+
+==================
+Hex GM 11
+==================
+
+(;FF[4]GM[11]SZ[11:13]IS[tried:on][lock:off][marked:off]IP[];B[e4];W[swap-pieces];B[forfeit])
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property
+          name: (property_identifier)
+          value: (property_value (value_content))
+          value: (property_value (value_content))
+          value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value)))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content))))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content))))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content)))))))
+
+==================
+Amazons GM 18
+==================
+
+(;FF[4]GM[18]SZ[10]AB[dj][gj][ag][jg]AW[da][ga][ad][jd]AA[ee][ff];B[djddgd];W[addgad])
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property
+          name: (property_identifier)
+          value: (property_value (value_content))
+          value: (property_value (value_content))
+          value: (property_value (value_content))
+          value: (property_value (value_content)))
+        (property
+          name: (property_identifier)
+          value: (property_value (value_content))
+          value: (property_value (value_content))
+          value: (property_value (value_content))
+          value: (property_value (value_content)))
+        (property
+          name: (property_identifier)
+          value: (property_value (value_content))
+          value: (property_value (value_content))))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content))))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content)))))))
+
+==================
+Octi GM 19
+==================
+
+(;FF[4]GM[19]RU[full:edgeless,superprong]BO[11][19]WO[91][99]NP[16]NR[7]NS[2]CS[46CD]MS[33]SS[84]TS[73]AS[46CD:56]RP[46CD];B[33+B!];W[84-86-68xDxAB])
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content))))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content))))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content)))))))
+
+==================
+Gess GM 20
+==================
+
+(;FF[4]GM[20]SZ[20]VW[aa:tt];B[hhhh];W[resign])
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content))))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content))))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content)))))))
+
+==================
+Twixt GM 21
+==================
+
+(;FF[4]GM[21]SZ[24:24]RU[STD]HA[]PZ[B+]IP[]VW[A1:L12];W[F5];B[-i'3][-J4'][\i'4][K4];W[accept-draw])
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value))
+        (property name: (property_identifier) value: (property_value (value_content)))
+        (property name: (property_identifier) value: (property_value))
+        (property name: (property_identifier) value: (property_value (value_content))))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content))))
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value (value_content))
+          value: (property_value (value_content))
+          value: (property_value (value_content))
+          value: (property_value (value_content))))
+      (node
+        (property name: (property_identifier) value: (property_value (value_content)))))))

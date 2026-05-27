@@ -1,0 +1,24 @@
+{
+  "name": "tree-sitter-sgf",
+  "version": "0.1.0",
+  "description": "Tree-sitter grammar for Smart Game Format (SGF) FF[4].",
+  "main": "bindings/node",
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "test": "tree-sitter test",
+    "parse": "tree-sitter parse"
+  },
+  "keywords": [
+    "tree-sitter",
+    "sgf",
+    "smart-game-format",
+    "baduk",
+    "go"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tree-sitter-cli": "^0.25.0"
+  }
+}
+

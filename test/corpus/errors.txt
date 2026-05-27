@@ -1,0 +1,41 @@
+==================
+Empty game tree
+==================
+
+()
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (MISSING ";")))))
+
+==================
+Property outside node
+==================
+
+(;)W[tt]
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node)))
+  (ERROR
+    (property_identifier)
+    (property_identifier)))
+
+==================
+Missing node semicolon
+==================
+
+(W[tt])
+
+---
+
+(ERROR
+  (property_identifier)
+  (property_identifier))
