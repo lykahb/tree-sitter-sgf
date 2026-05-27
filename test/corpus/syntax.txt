@@ -236,3 +236,97 @@ Lenient private and older identifiers
           name: (property_identifier)
           value: (property_value
             (value_content)))))))
+
+==================
+Empty and repeated property values
+==================
+
+(;C[]AB[][aa][bb]LB[aa:player1])
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value))
+        (property
+          name: (property_identifier)
+          value: (property_value)
+          value: (property_value
+            (value_content))
+          value: (property_value
+            (value_content)))
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content)))))))
+
+==================
+Whitespace around game trees and nodes
+==================
+
+  (;FF[4]
+    ;B[pd]
+    ;W[dd])
+
+  (;GM[1])
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content))))
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content))))
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content))))))
+  (game_tree
+    (sequence
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content)))))))
+
+==================
+Escaped delimiters inside values
+==================
+
+(;C[\] bracket \\ slash \[ opener])
+
+---
+
+(collection
+  (game_tree
+    (sequence
+      (node
+        (property
+          name: (property_identifier)
+          value: (property_value
+            (value_content)))))))
+
+==================
+Unclosed property value recovery
+==================
+
+(;C[unterminated)
+
+---
+
+(ERROR
+  (property_identifier)
+  (value_content))

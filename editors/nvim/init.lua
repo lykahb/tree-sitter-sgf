@@ -1,4 +1,5 @@
-local sgf_repo = "/Users/borys/projects/tree-sitter-sgf"
+local sgf_repo = vim.env.TREE_SITTER_SGF_REPO
+  or vim.fn.fnamemodify(debug.getinfo(1, "S").source:sub(2), ":p:h:h:h")
 
 vim.treesitter.language.add("sgf", {
   path = sgf_repo .. "/build/sgf.so",
@@ -18,4 +19,3 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.treesitter.start()
   end,
 })
-

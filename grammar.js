@@ -34,7 +34,7 @@ module.exports = grammar({
     ),
 
     // FF[4] standard properties are uppercase ASCII. Lowercase is accepted
-    // here so older and private real-world files remain structurally parseable.
+    // here so older and non-standard real-world files remain structurally parseable.
     property_identifier: $ => /[A-Za-z]+/,
 
     property_value: $ => seq(
@@ -49,4 +49,3 @@ module.exports = grammar({
     ))),
   },
 });
-

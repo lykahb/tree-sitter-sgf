@@ -4,12 +4,12 @@ This grammar implements the [Smart Game Format](https://en.wikipedia.org/wiki/Sm
 
 # Development
 
-Generate the parser and run the public corpus tests with:
+Install dependencies, generate the parser, and run the public corpus tests with:
 
 ```sh
 npm install
 npm run generate
-npm test
+npm run check
 ```
 
 The grammar follows the SGF FF[4] syntax definition: a source file is a
@@ -33,17 +33,22 @@ file-types = ["sgf"]
 
 [[grammar]]
 name = "sgf"
-source = { path = "/Users/borys/projects/tree-sitter-sgf" }
+source = { path = "/absolute/path/to/tree-sitter-sgf" }
 ```
 
 Then link the Helix query set into Helix's user runtime:
 
 ```sh
+REPO="$(pwd)"
 mkdir -p ~/.config/helix/runtime/queries
-ln -sfn /Users/borys/projects/tree-sitter-sgf/queries/helix ~/.config/helix/runtime/queries/sgf
+ln -sfn "$REPO/queries/helix" ~/.config/helix/runtime/queries/sgf
 hx -g build
 hx --health sgf
 ```
+
+`queries/helix/highlights.scm` intentionally duplicates the shared highlight
+query instead of using `; inherits: sgf`. When the Helix runtime path is a
+symlink named `sgf`, inheriting from `sgf` would inherit from itself.
 
 # Neovim
 
@@ -54,16 +59,23 @@ Build a shared parser for local testing:
 
 ```sh
 npm run generate
-npx tree-sitter build -o build/sgf.so
+npm run build:parser
 ```
 
 Register the local parser, filetype, and runtime path with the example config
-in `editors/nvim/init.lua`.
+in `editors/nvim/init.lua`. When copying that file outside this repository, set
+`TREE_SITTER_SGF_REPO` to the repository path or replace the `sgf_repo` value.
 
 Smoke-test the local Neovim setup with:
 
 ```sh
-nvim --headless --clean -u NONE -S editors/nvim/smoke.lua +qa
+npm run smoke:nvim
+```
+
+If you have a local untracked SGF corpus under `corpus/`, parse it with:
+
+```sh
+npm run parse:corpus
 ```
 
 # References

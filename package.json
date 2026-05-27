@@ -4,7 +4,12 @@
   "description": "Tree-sitter grammar for Smart Game Format (SGF) FF[4].",
   "main": "bindings/node",
   "scripts": {
+    "build:parser": "tree-sitter build -o build/sgf.so",
+    "check": "npm test",
     "generate": "tree-sitter generate",
+    "health:helix": "hx --health sgf",
+    "parse:corpus": "test ! -d corpus || find corpus -name '*.sgf' -print0 | xargs -0 ./node_modules/.bin/tree-sitter parse -q",
+    "smoke:nvim": "nvim --headless --clean -u NONE -S editors/nvim/smoke.lua +qa",
     "test": "tree-sitter test",
     "parse": "tree-sitter parse"
   },
@@ -21,4 +26,3 @@
     "tree-sitter-cli": "^0.25.0"
   }
 }
-
